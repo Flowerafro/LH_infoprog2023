@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONKATINERING</title>
+</head>
+<body>
+    
+<p id="mailStandard"></p> <!-- trengs for at JS kan skrive til html og vises på siden-->
+<p id="mailTempLit"></p>
+
+<script>
+    const name = "Line"
+    const mail = "linehenriksen0@gmail.com"
+
+    // standard konkatinering med plusstegn
+
+    const mailCodeStandard = "<a href='mailto:" + mail + "'>Send epost til " + name + "</a>" 
+    document.getElementById(mailStandard).innerHTML = mailCodeStandard
+
+
+    // Template literals
+
+    const mailCodeTempLit = `<a href="mailto:${mail}">Send epost til ${name}</a>` 
+    document.getElementById(mailTempLit).innerHTML = mailCodeTempLit
+
+</script>
+
+</body>
+</html>

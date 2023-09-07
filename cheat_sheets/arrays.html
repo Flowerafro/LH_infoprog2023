@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array cheat sheet</title>
+</head>
+<body>
+
+<p>Film med index 3: <span id="movieThree"></span></p>
+
+
+    <script>
+        const movieArchive = ["Frozen" , "Scarface" , "Matrix", "Inception", "Oppenheimer" , "Barbie"]
+       
+
+        // Skrive ut film med index 3 til nettsiden. Da må vi ha et sted å skrive til, eks p-tagg i HTML. 
+        // Må det stå 3 i [] ? dersom vi setter inn en variabel movieIndex = 3 så er movieIndex det samme som 3
+        //Om vi skriver movieIndex der [3] står skal filmnavn som nr 3 på lista dukke opp (Matrix)
+
+        const movieIndex = 3
+        document.getElementById("movieThree").innerHTML = movieArchive[3]
+
+        //Legge til en ny film 
+        // .push er en metode, samme som .getElementById
+        movieArchive.push("Gladiator")
+
+        // legge til en ny film men vi bestemmer hvor
+        // .splice starter med paramenter: index, delete count, string aka veridene vi skal legge til eks: (1,0, "navn på ny film" )
+        movieArchive.splice (1,0, "Barbie")
+
+        // slette en film (vi angir index fom den skal slette, hvilke filmer man skal slette):
+        movieArchive.splice (4, 2,)
+
+        //Hvordan sjekke om en verdi allerede finnes i Array:
+        // .includes metoden sjekker om verdi finnes ved boolean. trenger nøyaktige parametre og fungerer kun på VERDIENE
+        
+        const movieExists = movieArchive.includes("Frozen")
+        console.log("Does the movie Frozen exist? " + movieExists) //konkantinering
+
+        // Sortere Array alfabetisk a-å
+        movieArchive.sort()   // .sort vil sortere
+        movieArchive.reverse() // for reversering må sortering alltid komme foran
+
+        // Sortere Array med tall
+
+        const numberArray = [99, 2, 45, 32, 10, 78] 
+        // .sort vil sortere string ikke tall, her må vi sende med en sammenligningsfunksjon: (parameter 1, param. 2) funksjonen legger da det minste tallet først{return p1-p2} return betyr sende tilbake
+        // skal vi sortere med størst tall øverst må vi sette det høyeste tallet først (b kommer etter a)
+        numberArray.sort(function(a, b){return b-a})
+         // Teste at array fungerer
+         // skal man nå skrive ut index 6 og 7 som vi sist la til må vi flytte document.getElementById til under de siste .push
+         console.log(movieArchive);
+         console.log(numberArray);
+
+    </script>
+    
+</body>
+</html>

@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables cheat sheet</title>
+    <link rel="stylesheet" href="variables.css">
+
 </head>
 <body>
-    <main> 
+<h1 id="headline">Variables</h1>
 
-    </main>
+<p>Her lærer vi litt om variabler</p>
+<p>variabler kan tenkes på som gaver</p>
+<p>gaver vi gir, vet vi hva inneholder</p>
+<p>gaver vi får, må vi pakke opp</p>
+
 
     <script>
+        //alert ("This is not a test");
+    
+
+        const newHeadline = "Variables cheat sheet"
+        console.log(newHeadline);
+        // Finn html-element med id:headline og bytt ut verdien
+
+        document.getElementById("headline").innerHTML = newHeadline 
+
+        const newStatement = 10 + 12
+        console.log(newStatement);
+
+        document.querySelector("p").innerHTML = newStatement 
+
 
     </script>
 </body>

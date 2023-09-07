@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mail Link</title>
+</head>
+<body>
+
+    <p id="mailLink"></p>
+    
+    <script>
+        const name = "Line"
+        const mail = "linehenr0@hiof.no"
+         
+        const emailLink = `<a href=mailto:${mail}> send epost til ${name}</a>` // back tick gjør at man går ut av script og inn i HTML, da kan man skrive HTML i JS 
+
+        document.getElementById("mailLink").innerHTML = emailLink
+
+    </script>
+    
+</body>
+</html>
